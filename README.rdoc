@@ -1,4 +1,4 @@
-== mailboxlayer
+== mailboxlayer {<img src="https://travis-ci.org/actfong/mailboxlayer.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/actfong/mailboxlayer]
 
 Ruby wrapper for mailboxlayer of apilayer.
 See https://mailboxlayer.com/ and http://apilayer.com for more details.
