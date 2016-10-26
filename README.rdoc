@@ -1,5 +1,4 @@
-== mailboxlayer {<img src="https://travis-ci.org/actfong/mailboxlayer.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/actfong/mailboxlayer] [![Code Climate](https://codeclimate.com/github/actfong/mailboxlayer/badges/gpa.svg)](https://codeclimate.com/github/actfong/mailboxlayer) [![Gem Version](https://badge.fury.io/rb/mailboxlayer.svg)](https://badge.fury.io/rb/mailboxlayer)
-
+== mailboxlayer {<img src="https://travis-ci.org/actfong/mailboxlayer.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/actfong/mailboxlayer] {<img src="https://codeclimate.com/github/actfong/mailboxlayer/badges/gpa.svg" />}[https://codeclimate.com/github/actfong/mailboxlayer] {<img src="https://badge.fury.io/rb/mailboxlayer.svg" alt="Gem Version" />}[https://badge.fury.io/rb/mailboxlayer]
 Ruby wrapper for mailboxlayer of apilayer.
 See https://mailboxlayer.com/ and http://apilayer.com for more details.
 
