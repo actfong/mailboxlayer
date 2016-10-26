@@ -1,0 +1,12 @@
+#!/usr/bin/env ruby
+
+require "bundler"
+Bundler.require :default, :development
+file = File.expand_path("../../lib/mailboxlayer.rb", __FILE__)
+require file
+
+puts "Configure your mailboxlayer by:\n\n"
+puts "Apilayer::Mailbox.configure do |c|"
+puts "  c.access_key = 'your_access_key'"
+puts "end\n\n"
+Pry.start

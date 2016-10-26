@@ -1,0 +1,38 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://apilayer.net/api/check?access_key=foobar123&email=support@apilayer.com&smtp=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 26 Oct 2016 21:04:19 GMT
+      Server:
+      - Apache/2.4.7 (Ubuntu)
+      X-Powered-By:
+      - PHP/5.5.9-1ubuntu4.14
+      Access-Control-Allow-Origin:
+      - "*"
+      Content-Length:
+      - '220'
+      Content-Type:
+      - application/json; Charset=UTF-8
+    body:
+      encoding: UTF-8
+      string: '{"email":"support@apilayer.com","did_you_mean":"","user":"support","domain":"apilayer.com","format_valid":true,"mx_found":true,"smtp_check":false,"catch_all":null,"role":true,"disposable":false,"free":false,"score":0.64}'
+    http_version: 
+  recorded_at: Wed, 26 Oct 2016 21:00:45 GMT
+recorded_with: VCR 3.0.3

@@ -1,0 +1,58 @@
+== mailboxlayer
+
+Ruby wrapper for mailboxlayer of apilayer.
+See https://mailboxlayer.com/ and http://apilayer.com for more details.
+
+=== Introduction
+Connect to mailboxlayer to verify email addresses.
+Mailboxlayer verifies the existence of email-addresses by first checking MX-records (to see whether the specified domain is configured to receive emails), then by contacting the corresponding email server through SMTP, to see whether the provided email exists.
+
+While the *mailboxlayer* gem focuses on the functionalities offered by mailboxlayer, it depends on the *apilayer* gem to configure and create connections to apilayer.net
+
+=== Installation
+
+==== Using Bundler
+
+Add apilayer in your <tt>Gemfile</tt>:
+
+  gem "mailboxlayer"
+
+Run the following in your console:
+
+  $ bundle install
+
+=== Usage
+
+==== Add to your application
+  require "mailboxlayer"
+
+==== Set up mailboxlayer
+Once you have signed up for *mailboxlayer.com*, you will receive an access_key.
+Then configure your Apilayer::Mailbox module like this:
+
+  Apilayer::Mailbox.configure do |configs|
+    configs.access_key = "my_access_key_123"
+    configs.https = true
+  end
+
+Please note that the https configuration is optional and only available to paid-accounts.
+If unset, these configuration-values are just nil.
+
+You can always review you configurations with:
+
+  Apilayer::Mailbox.configs
+
+Once your configurations are set, you are ready to go
+
+==== mailboxlayer
+After setting the access_key for *mailboxlayer*, you can use Apilayer::Mailbox to call *mailboxlayer*'s API
+
+  Apilayer::Mailbox.check("support@apilayer.com")
+
+==== Re-Configure access_key and https
+If you happened to have forgotten to set or entered an incorrect value, you can re-configure your Apilayer module by:
+
+  # Example: reconfigure https
+  Apilayer::Mailbox.configure do |configs|
+    configs.https = true
+  end
