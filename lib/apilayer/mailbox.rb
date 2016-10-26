@@ -29,7 +29,6 @@ module Apilayer
       get_and_parse("check", params)
     end
 
-    private
     def self.assign_smtp_value(opts)
       if opts[:smtp] == false
         { smtp: 0 }
