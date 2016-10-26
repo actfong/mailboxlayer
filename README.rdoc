@@ -4,7 +4,7 @@ Ruby wrapper for mailboxlayer of apilayer.
 See https://mailboxlayer.com/ and http://apilayer.com for more details.
 
 === Introduction
-Connect to mailboxlayer to verify email addresses.
+Connect to mailboxlayer.com to verify email addresses.
 Mailboxlayer verifies the existence of email-addresses by first checking MX-records (to see whether the specified domain is configured to receive emails), then by contacting the corresponding email server through SMTP, to see whether the provided email exists.
 
 While the *mailboxlayer* gem focuses on the functionalities offered by mailboxlayer, it depends on the *apilayer* gem to configure and create connections to apilayer.net
