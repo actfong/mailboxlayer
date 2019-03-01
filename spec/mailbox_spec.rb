@@ -49,5 +49,25 @@ describe Apilayer::Mailbox do
         subject
       end
     end
+
+    context 'with catch_all: false' do
+      subject { Apilayer::Mailbox.check(email, catch_all: false) }
+      specify do
+        expect(Apilayer::Mailbox).to receive(:get_and_parse).with(
+          'check', hash_including( catch_all: 0, email: email)
+        )
+        subject
+      end
+    end
+
+    context 'with catch_all: true' do
+      subject { Apilayer::Mailbox.check(email, catch_all: true) }
+      specify do
+        expect(Apilayer::Mailbox).to receive(:get_and_parse).with(
+          'check', hash_including( catch_all: 1, email: email)
+        )
+        subject
+      end
+    end
   end
 end
