@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://apilayer.net/api/check?access_key=foobar123&email=support@apilayer.com&smtp=1
+    uri: http://apilayer.net/api/check?access_key=foobar123&catch_all=0&email=support@apilayer.com&smtp=1
     body:
       encoding: US-ASCII
       string: ''
@@ -33,6 +33,6 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"email":"support@apilayer.com","did_you_mean":"","user":"support","domain":"apilayer.com","format_valid":true,"mx_found":true,"smtp_check":false,"catch_all":null,"role":true,"disposable":false,"free":false,"score":0.64}'
-    http_version: 
+    http_version:
   recorded_at: Wed, 26 Oct 2016 21:00:45 GMT
 recorded_with: VCR 3.0.3
